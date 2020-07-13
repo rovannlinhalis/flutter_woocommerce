@@ -1,8 +1,8 @@
-name: flutter_woocommerce
+name: r_flutter_woocommerce
 description: A WooCommerce Flutter Package.
 version: 0.0.1
-repository: 
-homepage: "www.rovann.com.br"
+repository: https://github.com/rovannlinhalis/flutter_woocommerce
+homepage: "https://www.rovann.com.br"
 
 
 environment:
@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  meta: ^1.1.8
 
 dev_dependencies:
   flutter_test:

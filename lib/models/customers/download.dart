@@ -1,5 +1,5 @@
-import 'package:flutter_woocommerce/models/customers/file.dart';
-import 'package:flutter_woocommerce/models/generic/link.dart';
+import 'package:r_flutter_woocommerce/models/customers/file.dart';
+import 'package:r_flutter_woocommerce/models/generic/link.dart';
 
 class CustomerDownload {
   String downloadId;

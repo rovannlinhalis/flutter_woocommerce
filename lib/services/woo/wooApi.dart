@@ -1,4 +1,4 @@
-import 'package:flutter_woocommerce/services/woo/repository.dart';
+import 'package:r_flutter_woocommerce/services/woo/repository.dart';
 
 class WooCommerceApi {
   WooSettings settings = WooSettings(

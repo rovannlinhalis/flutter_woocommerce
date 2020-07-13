@@ -1,4 +1,4 @@
-import 'package:flutter_woocommerce/models/generic/href.dart';
+import 'package:r_flutter_woocommerce/models/generic/href.dart';
 
 class Links {
   List<HRef> self;

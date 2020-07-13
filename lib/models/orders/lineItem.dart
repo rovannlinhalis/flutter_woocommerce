@@ -1,6 +1,6 @@
 
-import 'package:flutter_woocommerce/models/generic/meta.dart';
-import 'package:flutter_woocommerce/models/orders/taxe.dart';
+import 'package:r_flutter_woocommerce/models/generic/meta.dart';
+import 'package:r_flutter_woocommerce/models/orders/taxe.dart';
 
 class LineItems {
   int id;

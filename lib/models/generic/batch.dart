@@ -1,5 +1,5 @@
 
-import 'package:flutter_woocommerce/models/base/baseModel.dart';
+import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:meta/meta.dart';
 
 

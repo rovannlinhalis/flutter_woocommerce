@@ -1,4 +1,4 @@
-import 'package:flutter_woocommerce/models/base/baseModel.dart';
+import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 
 class ProductCategory extends BaseModel {
   int id;

@@ -1,5 +1,5 @@
 
-import 'package:flutter_woocommerce/models/wordpress_constants.dart';
+import 'package:r_flutter_woocommerce/models/wordpress_constants.dart';
 
 class ParamsList {
   final WordPressContext context;

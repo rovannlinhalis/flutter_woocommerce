@@ -1,5 +1,5 @@
 
-import 'package:flutter_woocommerce/models/generic/meta.dart';
+import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 
 class TaxLines {
   int id;
