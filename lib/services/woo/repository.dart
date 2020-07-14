@@ -18,9 +18,29 @@ import 'package:meta/meta.dart';
 import 'dart:io';
 import 'dart:convert';
 
+
+
+export 'package:r_flutter_woocommerce/models/base/baseModel.dart';
+export 'package:r_flutter_woocommerce/models/coupon/coupon.dart';
+export 'package:r_flutter_woocommerce/models/customers/customer.dart';
+export 'package:r_flutter_woocommerce/models/generic/batch.dart';
+export 'package:r_flutter_woocommerce/models/generic/params.dart';
+export 'package:r_flutter_woocommerce/models/orders/notes/orderNote.dart';
+export 'package:r_flutter_woocommerce/models/orders/order.dart';
+export 'package:r_flutter_woocommerce/models/orders/refounds/refound.dart';
+export 'package:r_flutter_woocommerce/models/payment/paymentGateway.dart';
+export 'package:r_flutter_woocommerce/models/products/attribute_terms/attributeTerm.dart';
+export 'package:r_flutter_woocommerce/models/products/attributes/attributes.dart';
+export 'package:r_flutter_woocommerce/models/products/categories/productCategory.dart';
+export 'package:r_flutter_woocommerce/models/products/product.dart';
+export 'package:r_flutter_woocommerce/models/products/tag/productTag.dart';
+export 'package:r_flutter_woocommerce/models/products/variation/variation.dart';
+export 'package:meta/meta.dart';
+
 typedef TT ItemFromJson<TT>(Map<String, dynamic> json);
 
 class WooSettings {
+  
   String _baseUrl;
   String userKey;
   String userSecret;
@@ -382,3 +402,5 @@ class PaymentGatewayRepository extends WooRepository<PaymentGateway> {
             endPoint: "payment_gateways",
             modelFromJson: (json) => PaymentGateway.fromJson(json));
 }
+
+

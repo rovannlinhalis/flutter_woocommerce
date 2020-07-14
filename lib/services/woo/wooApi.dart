@@ -1,11 +1,13 @@
-import 'package:meta/meta.dart';
+
 import 'package:r_flutter_woocommerce/services/woo/repository.dart';
+
+export 'package:r_flutter_woocommerce/services/woo/repository.dart';
 
 class WooCommerceApi {
   // WooSettings settings = WooSettings(
-  //     baseUrl: "https://cardapio.rovann.com.br",
-  //     userKey: "ck_16238fba86074a3cc176afe91b2be8a68bd4fd13",
-  //     userSecret: "cs_b84084d728af36610ba1073ec591c0aa4af1ed8c");
+  //     baseUrl: "https://rovann.com.br",
+  //     userKey: "ck_0000000000000000000",
+  //     userSecret: "cs_00000000000000000000");
 
   WooSettings settings;
   
