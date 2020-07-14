@@ -2,6 +2,7 @@ import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 import 'package:r_flutter_woocommerce/models/orders/lineItem.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
 class Refound extends BaseModel {
   int id;
@@ -70,4 +71,8 @@ class Refound extends BaseModel {
     }
     return data;
   }
+}
+
+class BatchRefound extends BatchGeneric<Refound> {
+  BatchRefound() : super(creator: () => new Refound());
 }

@@ -1,4 +1,5 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
 class ProductAttribute extends BaseModel {
   int id;
@@ -35,4 +36,8 @@ class ProductAttribute extends BaseModel {
     data['options'] = this.options;
     return data;
   }
+}
+
+class BatchAttribute extends BatchGeneric<ProductAttribute> {
+  BatchAttribute() : super(creator: () => new ProductAttribute());
 }

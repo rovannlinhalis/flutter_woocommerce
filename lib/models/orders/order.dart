@@ -8,7 +8,7 @@ import 'package:r_flutter_woocommerce/models/orders/feeLines.dart';
 import 'package:r_flutter_woocommerce/models/orders/lineItem.dart';
 import 'package:r_flutter_woocommerce/models/orders/shippingLine.dart';
 import 'package:r_flutter_woocommerce/models/orders/taxLine.dart';
-
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 import 'orderRefound.dart';
 
 class Order extends BaseModel {
@@ -249,4 +249,8 @@ class Order extends BaseModel {
     }
     return data;
   }
+}
+
+class BatchOrder extends BatchGeneric<Order> {
+  BatchOrder() : super(creator: () => new Order());
 }

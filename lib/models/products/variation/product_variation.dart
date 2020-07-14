@@ -1,12 +1,13 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
-import 'package:r_flutter_woocommerce/models/products/attributes/attributes.dart';
+import 'package:r_flutter_woocommerce/models/products/attributes/product_attribute.dart';
 import 'package:r_flutter_woocommerce/models/products/download.dart';
 import 'package:r_flutter_woocommerce/models/products/dimension.dart';
 import 'package:r_flutter_woocommerce/models/products/image.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
-class Variation extends BaseModel {
+class ProductVariation extends BaseModel {
   int id;
   String dateCreated;
   String dateCreatedGmt;
@@ -48,7 +49,7 @@ class Variation extends BaseModel {
   List<Meta> metaData;
   Links lLinks;
 
-  Variation(
+  ProductVariation(
       {this.id,
       this.dateCreated,
       this.dateCreatedGmt,
@@ -90,7 +91,7 @@ class Variation extends BaseModel {
       this.metaData,
       this.lLinks});
 
-  Variation.fromJson(Map<String, dynamic> json) {
+  ProductVariation.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     dateCreated = json['date_created'];
     dateCreatedGmt = json['date_created_gmt'];
@@ -206,4 +207,8 @@ class Variation extends BaseModel {
     }
     return data;
   }
+}
+
+class BatchVariation extends BatchGeneric<ProductVariation> {
+  BatchVariation() : super(creator: () => new ProductVariation());
 }

@@ -3,6 +3,7 @@ import 'package:r_flutter_woocommerce/models/customers/shipping.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 import 'billing.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
 class Customer extends BaseModel {
   int id;
@@ -95,4 +96,9 @@ class Customer extends BaseModel {
     }
     return data;
   }
+}
+
+
+class BatchCustomer extends BatchGeneric<Customer> {
+  BatchCustomer() : super(creator: () => new Customer());
 }

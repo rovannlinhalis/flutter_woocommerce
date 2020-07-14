@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
@@ -142,4 +142,8 @@ class Coupon extends BaseModel {
   String toJsonString() {
     return json.encode(this);
   }
+}
+
+class BatchCoupon extends BatchGeneric<Coupon> {
+  BatchCoupon() : super(creator: () => new Coupon());
 }

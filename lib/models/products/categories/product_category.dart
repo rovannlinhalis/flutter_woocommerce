@@ -1,4 +1,5 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
 class ProductCategory extends BaseModel {
   int id;
@@ -20,4 +21,8 @@ class ProductCategory extends BaseModel {
     data['slug'] = this.slug;
     return data;
   }
+}
+
+class BatchCategory extends BatchGeneric<ProductCategory> {
+  BatchCategory() : super(creator: () => new ProductCategory());
 }

@@ -1,12 +1,13 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
-import 'package:r_flutter_woocommerce/models/products/attributes/attributes.dart';
-import 'package:r_flutter_woocommerce/models/products/categories/productCategory.dart';
+import 'package:r_flutter_woocommerce/models/products/attributes/product_attribute.dart';
+import 'package:r_flutter_woocommerce/models/products/categories/product_category.dart';
 import 'package:r_flutter_woocommerce/models/products/dimension.dart';
 import 'package:r_flutter_woocommerce/models/products/download.dart';
 import 'package:r_flutter_woocommerce/models/products/image.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
-import 'package:r_flutter_woocommerce/models/products/productTag.dart';
+import 'package:r_flutter_woocommerce/models/products/product_tag.dart';
+import 'package:r_flutter_woocommerce/models/generic/batch.dart';
 
 class Product extends BaseModel {
   int id;
@@ -343,4 +344,8 @@ class Product extends BaseModel {
     }
     return data;
   }
+}
+
+class BatchProduct extends BatchGeneric<Product> {
+  BatchProduct() : super(creator: () => new Product());
 }

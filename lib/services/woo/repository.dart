@@ -7,12 +7,12 @@ import 'package:r_flutter_woocommerce/models/orders/notes/orderNote.dart';
 import 'package:r_flutter_woocommerce/models/orders/order.dart';
 import 'package:r_flutter_woocommerce/models/orders/refounds/refound.dart';
 import 'package:r_flutter_woocommerce/models/payment/paymentGateway.dart';
-import 'package:r_flutter_woocommerce/models/products/attribute_terms/attributeTerm.dart';
-import 'package:r_flutter_woocommerce/models/products/attributes/attributes.dart';
-import 'package:r_flutter_woocommerce/models/products/categories/productCategory.dart';
+import 'package:r_flutter_woocommerce/models/products/attribute_terms/attribute_term.dart';
+import 'package:r_flutter_woocommerce/models/products/attributes/product_attribute.dart';
+import 'package:r_flutter_woocommerce/models/products/categories/product_category.dart';
 import 'package:r_flutter_woocommerce/models/products/product.dart';
-import 'package:r_flutter_woocommerce/models/products/tag/productTag.dart';
-import 'package:r_flutter_woocommerce/models/products/variation/variation.dart';
+import 'package:r_flutter_woocommerce/models/products/tag/tag.dart';
+import 'package:r_flutter_woocommerce/models/products/variation/product_variation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 import 'dart:io';
@@ -27,12 +27,12 @@ export 'package:r_flutter_woocommerce/models/orders/notes/orderNote.dart';
 export 'package:r_flutter_woocommerce/models/orders/order.dart';
 export 'package:r_flutter_woocommerce/models/orders/refounds/refound.dart';
 export 'package:r_flutter_woocommerce/models/payment/paymentGateway.dart';
-export 'package:r_flutter_woocommerce/models/products/attribute_terms/attributeTerm.dart';
-export 'package:r_flutter_woocommerce/models/products/attributes/attributes.dart';
-export 'package:r_flutter_woocommerce/models/products/categories/productCategory.dart';
+export 'package:r_flutter_woocommerce/models/products/attribute_terms/attribute_term.dart';
+export 'package:r_flutter_woocommerce/models/products/attributes/product_attribute.dart';
+export 'package:r_flutter_woocommerce/models/products/categories/product_category.dart';
 export 'package:r_flutter_woocommerce/models/products/product.dart';
-export 'package:r_flutter_woocommerce/models/products/tag/productTag.dart';
-export 'package:r_flutter_woocommerce/models/products/variation/variation.dart';
+export 'package:r_flutter_woocommerce/models/products/tag/tag.dart';
+export 'package:r_flutter_woocommerce/models/products/variation/product_variation.dart';
 export 'package:meta/meta.dart';
 
 typedef TT ItemFromJson<TT>(Map<String, dynamic> json);
@@ -346,13 +346,13 @@ class ProductRepository extends WooRepository<Product> {
             modelFromJson: (json) => Product.fromJson(json));
 }
 
-class ProductVariationRepository extends WooRepository<Variation> {
+class ProductVariationRepository extends WooRepository<ProductVariation> {
   ProductVariationRepository(
       {@required WooSettings settings, @required int productId})
       : super(
             settings: settings,
             endPoint: "products/" + productId.toString() + "/variations",
-            modelFromJson: (json) => Variation.fromJson(json));
+            modelFromJson: (json) => ProductVariation.fromJson(json));
 }
 
 class ProductAttributeRepository extends WooRepository<ProductAttribute> {
