@@ -8,7 +8,6 @@ import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 import 'package:r_flutter_woocommerce/models/products/productTag.dart';
 
-
 class Product extends BaseModel {
   int id;
   String name;
@@ -145,9 +144,6 @@ class Product extends BaseModel {
       this.metaData,
       this.lLinks});
 
-
-
-
   Product.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
@@ -208,8 +204,8 @@ class Product extends BaseModel {
     averageRating = json['average_rating'];
     ratingCount = json['rating_count'];
     relatedIds = json['related_ids'].cast<int>();
-      upsellIds = json['upsell_ids'].cast<int>();
-      crossSellIds = json['cross_sell_ids'].cast<int>();
+    upsellIds = json['upsell_ids'].cast<int>();
+    crossSellIds = json['cross_sell_ids'].cast<int>();
     parentId = json['parent_id'];
     purchaseNote = json['purchase_note'];
     if (json['categories'] != null) {

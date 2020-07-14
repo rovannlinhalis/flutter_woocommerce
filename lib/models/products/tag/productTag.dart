@@ -1,7 +1,7 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 
-class Tag extends BaseModel{
+class Tag extends BaseModel {
   int id;
   String name;
   String slug;
@@ -16,9 +16,6 @@ class Tag extends BaseModel{
       this.description,
       this.count,
       this.lLinks});
-
-
-
 
   Tag.fromJson(Map<String, dynamic> json) {
     id = json['id'];

@@ -1,4 +1,3 @@
-
 import 'package:r_flutter_woocommerce/models/wordpress_constants.dart';
 
 class ParamsList {

@@ -11,7 +11,7 @@ import 'package:r_flutter_woocommerce/models/orders/taxLine.dart';
 
 import 'orderRefound.dart';
 
-class Order  extends BaseModel {
+class Order extends BaseModel {
   int id;
   int parentId;
   String number;
@@ -98,8 +98,6 @@ class Order  extends BaseModel {
       this.couponLines,
       this.refunds,
       this.lLinks});
-
-
 
   Order.fromJson(Map<String, dynamic> json) {
     id = json['id'];

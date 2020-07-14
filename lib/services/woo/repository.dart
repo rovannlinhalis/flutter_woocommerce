@@ -18,8 +18,6 @@ import 'package:meta/meta.dart';
 import 'dart:io';
 import 'dart:convert';
 
-
-
 export 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 export 'package:r_flutter_woocommerce/models/coupon/coupon.dart';
 export 'package:r_flutter_woocommerce/models/customers/customer.dart';
@@ -40,7 +38,6 @@ export 'package:meta/meta.dart';
 typedef TT ItemFromJson<TT>(Map<String, dynamic> json);
 
 class WooSettings {
-  
   String _baseUrl;
   String userKey;
   String userSecret;
@@ -172,8 +169,6 @@ class WooRepository<T extends BaseModel> {
         code: response.statusCode);
   }
 
-
-
   Future<WooResult<T>> create(T obj) async {
     String url = apiUrl;
     HTTPResponse response = await httpPost(url, json.encode(obj.toJson()));
@@ -219,8 +214,7 @@ class WooRepository<T extends BaseModel> {
       result = new WooResult<List<T>>(
           message: "sucesso", result: resultado, sucess: true);
     } else {
-      result =
-          new WooResult<List<T>>(message: response.content, sucess: false);
+      result = new WooResult<List<T>>(message: response.content, sucess: false);
     }
     return result;
   }
@@ -402,5 +396,3 @@ class PaymentGatewayRepository extends WooRepository<PaymentGateway> {
             endPoint: "payment_gateways",
             modelFromJson: (json) => PaymentGateway.fromJson(json));
 }
-
-

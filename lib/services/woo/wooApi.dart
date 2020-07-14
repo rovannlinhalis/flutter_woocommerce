@@ -1,4 +1,3 @@
-
 import 'package:r_flutter_woocommerce/services/woo/repository.dart';
 
 export 'package:r_flutter_woocommerce/services/woo/repository.dart';
@@ -10,7 +9,7 @@ class WooCommerceApi {
   //     userSecret: "cs_00000000000000000000");
 
   WooSettings settings;
-  
+
   ProductRepository products;
   CustomerRepository customers;
   OrderRepository orders;
@@ -20,7 +19,7 @@ class WooCommerceApi {
   ProductTagRepository productTags;
   PaymentGatewayRepository paymentGateways;
 
-  WooCommerceApi({@required WooSettings wooSettings} ) {
+  WooCommerceApi({@required WooSettings wooSettings}) {
     this.settings = wooSettings;
     customers = CustomerRepository(settings: settings);
     orders = OrderRepository(settings: settings);
@@ -45,7 +44,7 @@ class WooCommerceApi {
   }
 
   ProductAttributeTermsRepository productAttributeTerms(int attributeId) {
-    return ProductAttributeTermsRepository(attributeId: attributeId, settings: settings);
+    return ProductAttributeTermsRepository(
+        attributeId: attributeId, settings: settings);
   }
-  
 }

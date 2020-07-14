@@ -12,7 +12,14 @@ class FeeLine {
   List<Meta> metaData;
 
   FeeLine(
-      {this.id, this.name, this.taxClass, this.taxStatus, this.total, this.totalTax, this.taxes, this.metaData});
+      {this.id,
+      this.name,
+      this.taxClass,
+      this.taxStatus,
+      this.total,
+      this.totalTax,
+      this.taxes,
+      this.metaData});
 
   FeeLine.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -22,13 +29,12 @@ class FeeLine {
     total = json['total'];
     totalTax = json['total_tax'];
 
-
     if (json['taxes'] != null) {
       taxes = new List<Taxes>();
       json['taxes'].forEach((v) {
         taxes.add(new Taxes.fromJson(v));
       });
-    }    
+    }
 
     if (json['meta_data'] != null) {
       metaData = new List<Meta>();
@@ -47,7 +53,6 @@ class FeeLine {
     data['tax_status'] = this.taxStatus;
     data['total'] = this.total;
     data['total_tax'] = this.totalTax;
-    
 
     if (this.taxes != null) {
       data['taxes'] = this.taxes.map((v) => v.toJson()).toList();

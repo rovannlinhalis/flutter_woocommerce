@@ -1,6 +1,11 @@
 name: r_flutter_woocommerce
-description: A WooCommerce Flutter Package.
-version: 0.0.4
+description: 'A Flutter package for woocommerce api. Implemented using repository pattern, generics and inheritance.
+Still missing:
+JWT authentication
+Cart
+Shipping zones
+Shipping methods'
+version: 0.0.5
 repository: https://github.com/rovannlinhalis/flutter_woocommerce
 homepage: "https://www.rovann.com.br"
 

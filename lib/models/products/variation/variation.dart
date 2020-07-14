@@ -90,9 +90,6 @@ class Variation extends BaseModel {
       this.metaData,
       this.lLinks});
 
-
-
-
   Variation.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     dateCreated = json['date_created'];
@@ -210,12 +207,3 @@ class Variation extends BaseModel {
     return data;
   }
 }
-
-
-
-
-
-
-
-
-

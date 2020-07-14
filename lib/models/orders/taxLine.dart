@@ -1,4 +1,3 @@
-
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 
 class TaxLines {

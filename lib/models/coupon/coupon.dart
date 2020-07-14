@@ -4,7 +4,7 @@ import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/generic/meta.dart';
 
-class Coupon  extends BaseModel {
+class Coupon extends BaseModel {
   int id;
   String code;
   String amount;
@@ -64,8 +64,6 @@ class Coupon  extends BaseModel {
       this.metaData,
       this.lLinks});
 
-  
-
   Coupon.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     code = json['code'];
@@ -119,17 +117,17 @@ class Coupon  extends BaseModel {
     data['usage_count'] = this.usageCount;
     data['individual_use'] = this.individualUse;
     data['product_ids'] = this.productIds;
-    data['excluded_product_ids'] =       this.excludedProductIds;
+    data['excluded_product_ids'] = this.excludedProductIds;
     data['usage_limit'] = this.usageLimit;
     data['usage_limit_per_user'] = this.usageLimitPerUser;
     data['limit_usage_to_x_items'] = this.limitUsageToXItems;
     data['free_shipping'] = this.freeShipping;
-    data['product_categories'] =        this.productCategories;
-    data['excluded_product_categories'] =          this.excludedProductCategories;
+    data['product_categories'] = this.productCategories;
+    data['excluded_product_categories'] = this.excludedProductCategories;
     data['exclude_sale_items'] = this.excludeSaleItems;
     data['minimum_amount'] = this.minimumAmount;
     data['maximum_amount'] = this.maximumAmount;
-    data['email_restrictions'] =          this.emailRestrictions;
+    data['email_restrictions'] = this.emailRestrictions;
     data['used_by'] = this.usedBy;
     if (this.metaData != null) {
       data['meta_data'] = this.metaData.map((v) => v.toJson()).toList();
@@ -144,7 +142,4 @@ class Coupon  extends BaseModel {
   String toJsonString() {
     return json.encode(this);
   }
-
-  
 }
-

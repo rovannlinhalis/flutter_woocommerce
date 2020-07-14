@@ -1,7 +1,7 @@
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 
-class AttributeTerms  extends BaseModel {
+class AttributeTerms extends BaseModel {
   int id;
   String name;
   String slug;
@@ -18,7 +18,6 @@ class AttributeTerms  extends BaseModel {
       this.menuOrder,
       this.count,
       this.lLinks});
-
 
   AttributeTerms.fromJson(Map<String, dynamic> json) {
     id = json['id'];

@@ -1,16 +1,12 @@
-
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:meta/meta.dart';
 
-
 typedef S ItemCreator<S>();
-
 
 class BatchGeneric<T extends BaseModel> {
   List<T> create;
   List<T> update;
   List<int> delete;
-
 
   ItemCreator<T> creator;
 

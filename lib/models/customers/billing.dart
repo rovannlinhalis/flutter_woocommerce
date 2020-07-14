@@ -1,4 +1,4 @@
-class Billing  {
+class Billing {
   String firstName;
   String lastName;
   String company;

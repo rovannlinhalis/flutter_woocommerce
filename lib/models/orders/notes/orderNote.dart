@@ -1,7 +1,7 @@
 import 'package:r_flutter_woocommerce/models/base/baseModel.dart';
 import 'package:r_flutter_woocommerce/models/generic/link.dart';
 
-class OrderNote  extends BaseModel {
+class OrderNote extends BaseModel {
   int id;
   String author;
   String dateCreated;
@@ -18,9 +18,6 @@ class OrderNote  extends BaseModel {
       this.note,
       this.customerNote,
       this.lLinks});
-
-
-
 
   OrderNote.fromJson(Map<String, dynamic> json) {
     id = json['id'];

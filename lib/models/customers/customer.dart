@@ -40,7 +40,6 @@ class Customer extends BaseModel {
       this.metaData,
       this.lLinks});
 
-
   Customer.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     dateCreated = json['date_created'];
@@ -97,9 +96,3 @@ class Customer extends BaseModel {
     return data;
   }
 }
-
-
-
-
-
-

@@ -1,4 +1,3 @@
-
 class Taxes {
   int id;
   String total;
@@ -20,4 +19,3 @@ class Taxes {
     return data;
   }
 }
-
